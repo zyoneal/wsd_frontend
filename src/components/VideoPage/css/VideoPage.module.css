@@ -1,0 +1,132 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	background-color: #f4f7fb;
+	min-height: 100vh;
+	font-family: 'Arial', sans-serif;
+}
+
+.header {
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.uploadSection {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.uploadButton {
+	background-color: #002855;
+	color: #fff;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-align: center;
+	flex-grow: 1;
+	margin: 0 0.5rem;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+	font-family: 'Arial', sans-serif;
+	border: none;
+}
+
+.uploadButton:hover {
+	background-color: #00549d;
+}
+
+.downloadLinkContainer {
+	background-color: transparent;
+	color: #007bff;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	cursor: default;
+	text-align: center;
+	flex-grow: 1;
+	margin: 0 0.5rem;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+	font-family: 'Arial', sans-serif;
+	border: none;
+}
+
+.downloadLinkContainer span {
+	cursor: pointer;
+}
+
+.downloadLinkContainer:hover span {
+	color: #0056b3;
+}
+
+
+.uploadInput {
+	display: none;
+}
+
+.uploadStatus, .errorMessage {
+	text-align: center;
+	font-size: 0.875rem;
+	margin: 1rem 0;
+}
+
+.errorMessage {
+	color: #e63946;
+}
+
+.videoContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.videoContainer video {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.uploadSection {
+		width: 100%;
+		justify-content: flex-start;
+	}
+	
+	.uploadButton {
+		margin-bottom: 10px;
+	}
+	
+	.uploadStatus,
+	.errorMessage {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		padding: 15px;
+	}
+	
+	.uploadButton {
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+	
+	.uploadStatus,
+	.errorMessage {
+		font-size: 14px;
+	}
+}

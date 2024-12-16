@@ -1,0 +1,250 @@
+:root {
+	--font-family: 'Helvetica Neue', Arial, sans-serif;
+	--background-color: #f0f4f8;
+	--primary-text-color: #333;
+	--secondary-text-color: #7f8c8d;
+	--accent-color: #3498db;
+	--error-color: #e74c3c;
+	--border-color: #bdc3c7;
+	--box-shadow-color: rgba(0, 0, 0, 0.1);
+	--hover-box-shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-family);
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
+	line-height: 1.6;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	min-height: 100vh;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.header h1 {
+	font-size: 2.5rem;
+	color: #34495e;
+	margin-bottom: 10px;
+}
+
+.searchInput {
+	padding: 12px 18px;
+	font-size: 1rem;
+	width: 100%;
+	max-width: 350px;
+	border: 1px solid var(--border-color);
+	border-radius: 30px;
+	outline: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.searchInput:focus {
+	border-color: var(--accent-color);
+	box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.resourcesWrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 800px;
+}
+
+.resourcesList {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.resourceItem {
+	border: 1px solid var(--border-color);
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #fff;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resourceItem:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 4px 8px var(--box-shadow-color);
+}
+
+.resourceContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.resourceName {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: var(--primary-text-color);
+}
+
+.resourceItem p {
+	color: var(--secondary-text-color);
+	font-size: 0.9rem;
+	margin: 0;
+}
+
+.errorMessage {
+	color: var(--error-color);
+	font-size: 1rem;
+	margin-top: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.emptyState {
+	text-align: center;
+	color: var(--secondary-text-color);
+	margin-top: 50px;
+	font-size: 1.2rem;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px var(--box-shadow-color);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.emptyState:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 10px var(--hover-box-shadow-color);
+}
+
+.deleteButton {
+	padding: 8px 12px;
+	font-size: 0.9rem;
+	font-weight: bold;
+	background-color: var(--error-color);
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.deleteButton:hover {
+	background-color: #c0392b;
+	transform: scale(1.05);
+}
+
+.exportButton {
+	display: block;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #002855;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-left: 20px;
+}
+
+.exportButton:hover {
+	background-color: #004080;
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exportButton:active {
+	background-color: #001c42;
+	transform: scale(0.98);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.exportButton:disabled {
+	background-color: #9aa7b8;
+	cursor: not-allowed;
+	box-shadow: none;
+}
+
+@media (max-width: 1200px) {
+	.header h1 {
+		font-size: 2rem;
+	}
+	
+	.searchInput {
+		max-width: 80%;
+	}
+	
+	.resourcesList {
+		max-width: 95%;
+	}
+}
+
+@media (max-width: 768px) {
+	.header h1 {
+		font-size: 1.8rem;
+	}
+	
+	.searchInput {
+		max-width: 90%;
+	}
+	
+	.resourceName {
+		font-size: 1rem;
+	}
+	
+	.resourceItem {
+		padding: 12px;
+	}
+	
+	.emptyState {
+		font-size: 1rem;
+		padding: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 10px;
+	}
+	
+	.header h1 {
+		font-size: 1.6rem;
+	}
+	
+	.searchInput {
+		max-width: 100%;
+	}
+	
+	.resourcesList {
+		max-width: 100%;
+	}
+	
+	.resourceName {
+		font-size: 0.9rem;
+	}
+	
+	.resourceItem {
+		padding: 10px;
+	}
+	
+	.emptyState {
+		font-size: 0.9rem;
+		padding: 10px;
+	}
+}

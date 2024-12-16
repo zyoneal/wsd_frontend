@@ -1,0 +1,161 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	background-color: #f7f9fb;
+	min-height: 100vh;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.title {
+	font-size: 2.5rem;
+	color: #003366;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+.subtitle {
+	font-size: 1.125rem;
+	color: #444;
+	margin-bottom: 30px;
+	max-width: 700px;
+	margin: 0 auto;
+	font-weight: 500;
+}
+
+.features {
+	margin-top: 2rem;
+	padding: 2rem 0;
+	border-top: 2px solid #e0e0e0;
+	width: 100%;
+	max-width: 960px;
+}
+
+.featuresTitle {
+	font-size: 1.625rem;
+	color: #003366;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.featureList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.featureItem {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover {
+	transform: scale(1.05);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+	background-color: #f0f7ff;
+}
+
+.featureItem h3 {
+	color: #003366;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.steps {
+	margin-top: 3rem;
+	padding: 2rem 0;
+	border-top: 2px solid #e0e0e0;
+	width: 100%;
+	max-width: 960px;
+}
+
+.stepsTitle {
+	font-size: 1.625rem;
+	color: #003366;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.stepsList {
+	list-style-type: decimal;
+	padding-left: 20px;
+	font-size: 1.125rem;
+	color: #444;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.stepsList li {
+	margin-bottom: 15px;
+}
+
+.featuresDetails {
+	margin-top: 2rem;
+	width: 100%;
+	max-width: 960px;
+}
+
+.featuresDetailsList {
+	font-size: 1.125rem;
+	color: #444;
+	padding-left: 20px;
+}
+
+.featuresDetailsList li {
+	margin-bottom: 10px;
+}
+
+.footer {
+	margin-top: 40px;
+	font-size: 0.875rem;
+	color: #aaa;
+	text-align: center;
+}
+
+@media (max-width: 1024px) {
+	.title {
+		font-size: 2rem;
+	}
+	
+	.subtitle {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.featureList {
+		grid-template-columns: 1fr;
+	}
+	
+	.title {
+		font-size: 1.5rem;
+	}
+	
+	.subtitle {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.title {
+		font-size: 1.25rem;
+	}
+	
+	.subtitle {
+		font-size: 0.875rem;
+	}
+	
+	.featureItem {
+		padding: 15px;
+	}
+}

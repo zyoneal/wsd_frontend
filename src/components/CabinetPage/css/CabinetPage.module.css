@@ -1,0 +1,54 @@
+.cabinet_container {
+	padding: 20px;
+	max-width: 600px;
+	margin: 0 auto;
+	background: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user_info {
+	margin-top: 20px;
+}
+
+.user_info p {
+	margin: 10px 0;
+}
+
+.message {
+	text-align: center;
+	font-size: 18px;
+	color: #ff0000;
+}
+
+@media (max-width: 768px) {
+	.cabinet_container {
+		padding: 15px;
+		max-width: 100%;
+		margin: 0 10px;
+	}
+	
+	.user_info p {
+		font-size: 16px;
+	}
+	
+	.message {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 480px) {
+	.cabinet_container {
+		padding: 10px;
+		max-width: 100%;
+		margin: 0 10px;
+	}
+	
+	.user_info p {
+		font-size: 14px;
+	}
+	
+	.message {
+		font-size: 14px;
+	}
+}
